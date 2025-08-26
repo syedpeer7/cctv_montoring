@@ -15,9 +15,9 @@ from ultralytics import YOLO
 # Add up to 4 sources: 0 = laptop webcam; "http://phone-ip:8080/video" for phone cameras
 CAM_SOURCES = [
     0,  # Laptop webcam
-    "http://10.189.3.89:8080/video",  # Phone 1 IP Webcam URL
-    "http://192.0.0.4:8080/video",  # Phone 2 IP Webcam URL
-    "http://192.168.1.12:8080/video"   # Phone 3 IP Webcam URL
+    "http://<ip>:8080/video",  # Phone 1 IP Webcam URL
+    "http://<ip>:8080/video",  # Phone 2 IP Webcam URL
+    "http://<ip>:8080/video"   # Phone 3 IP Webcam URL
 ]
 SAVE_DIR = Path("data")
 SAVE_DIR.mkdir(exist_ok=True)
@@ -261,3 +261,4 @@ if __name__ == "__main__":
         threads.append(t)
     for t in threads:
         t.join()
+
